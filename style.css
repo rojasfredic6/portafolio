@@ -1,0 +1,73 @@
+:root {
+    --vue-blue: rgba(13, 97, 119, 1)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Main {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: minmax(300px, max-content) 1fr;
+}
+
+#content {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+}
+
+.Header-content {
+    background: linear-gradient(180deg, rgba(0, 255, 164, 1) 0%, rgba(13, 97, 119, 1) 99%);
+    min-height: 300px;
+    grid-template-rows: 1.7fr 0.3fr;
+}
+
+#Header-ul-list {
+    display: none;
+}
+
+#Header-ul-list>li {
+    padding: 2px 0;
+    margin: 2px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgba(13, 97, 119, 1);
+}
+
+#menutoggle:checked~#Header-ul-list {
+    display: block;
+}
+
+#menutoggle:checked~.Header-content {
+    grid-template-rows: 0.8fr 1.2fr;
+}
+
+#Header-menu {
+    display: block;
+}
+
+.bg-blue-vue {
+    background-color: rgba(13, 97, 119, 1);
+}
+
+.perfil-picture {
+    width: 360px;
+}
+
+@media screen and (min-width: 670px) {
+    #Header-ul-list {
+        display: grid;
+    }
+    #Header-menu {
+        display: none;
+    }
+}
+
+footer {
+    background: linear-gradient(180deg, rgba(0, 255, 164, 1) 0%, rgba(13, 97, 119, 1) 99%);
+    color: white;
+}
